@@ -1,0 +1,53 @@
+
+<div class="all-wrapper">
+
+    <div class="profile-background-wrapper">
+        <iframe  class="profile-background" width="560" height="315" src="https://www.youtube.com/embed/ifcilDcfLlA?controls=0&showinfo=0&rel=0&autoplay=1&loop=1&playlist=ifcilDcfLlA" frameborder="0" allowfullscreen playsinline autoplay muted loop></iframe>
+    </div>
+
+    <img ui-sref="home" class="profile-main-logo" src="../front/assets/theoutbound.png" ui-sref="home">
+
+    <div class="new-adventure-show">
+        <h3 class="new-adv-header">Create New Adventure</h3>
+        <div class="new-adventure">
+            <input class="profile-input" ng-model="newAdventure.title" placeholder="Title"> <br>
+            <input class="profile-input" ng-model="newAdventure.description" placeholder="Description"> <br>
+            <input class="profile-input" ng-model="newAdventure.directions" placeholder="Directions"> <br>
+            <input class="profile-input" ng-model="newAdventure.packlist" placeholder="Packlist"> <br>
+
+            <h4>Add Up To 6 Images</h4>
+            <input class="profile-input" placeholder="Image URL" ng-model="newAdventure.one"><br>
+            <input class="profile-input" placeholder="Image URL" ng-model="newAdventure.two"><br>
+            <input class="profile-input" placeholder="Image URL" ng-model="newAdventure.three"><br>
+            <input class="profile-input" placeholder="Image URL" ng-model="newAdventure.four"><br>
+            <input class="profile-input" placeholder="Image URL" ng-model="newAdventure.five"><br>
+            <input class="profile-input" placeholder="Image URL" ng-model="newAdventure.six"><br>
+            <button class="profile-submit" ng-click="submitAdv(newAdventure)">SUBMIT</button>
+
+            <div class="map-hider" ng-show="mapHider">
+                <h4>Please Add A Location</h4><br>
+                <map-directive id="the-map"></map-directive>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="profile-nav" ng-click="profileNavToggle()" ng-mouseenter="profileNavHighlight()">
+        <div class="profile-nav-toggle">
+            <span class="nav-toggle" ng-click="newAdventureShow()"><p>create new adventure</p></span>
+            <span class="nav-toggle"><p>create new story</p></span>
+            <span class="nav-toggle"><p>create new kit</p></span>
+            <span class="nav-toggle"><p>create new job</p></span>
+            <span class="nav-toggle" ng-click="profileShow()"><p>profile</p></span>
+        </div>
+
+    </div>
+
+    <div class="profile-nav-container">
+        <div class="profile-main"></div>
+    </div>
+
+
+
+
+</div>
